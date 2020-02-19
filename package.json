@@ -19,17 +19,5 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "description": "",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dinoxas/fake-twitter.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dinoxas/fake-twitter/issues"
-  },
-  "homepage": "https://github.com/dinoxas/fake-twitter#readme"
+  }
 }
