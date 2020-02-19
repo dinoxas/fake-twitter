@@ -38,8 +38,7 @@ class NewTweet extends Component {
       return <Redirect to="/" />;
     }
 
-    const tweetMaxChar = 280;
-    const tweetLeft = tweetMaxChar - text.length;
+    const tweetLeft = 280 - text.length;
 
     return (
       <div className="section">
@@ -50,7 +49,7 @@ class NewTweet extends Component {
             value={text}
             onChange={this.handleChange}
             className="textarea"
-            maxLength={tweetMaxChar}
+            maxLength={280}
           />
           {tweetLeft <= 100 && <div className="tweet-length">{tweetLeft}</div>}
           <button

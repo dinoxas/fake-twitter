@@ -6,7 +6,7 @@ import Tweet from "./Tweet";
 class Dashboard extends Component {
   render() {
     return (
-      <div className="">
+      <div>
         <div className="has-text-centered">
           <FaTwitter size="32" color="rgb(29, 161, 242)" />
         </div>
