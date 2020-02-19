@@ -130,33 +130,3 @@
   display: inline-block;
   margin-right: 20px;
 }
-
-/* .nav {
-  position: fixed;
-  left: 20px;
-  top: 220px;
-  border-right: 1px solid rgb(245, 248, 250);
-  background: #fff;
-  height: 100%;
-}
-
-.nav a {
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 1;
-}
-
-.nav a:hover {
-  background-color: rgb(245, 248, 250);
-  transition: 0.3 ease-in;
-}
-
-@media only screen and (device-width: 768px),
-  only screen and (max-width: 768px) {
-  .nav {
-    position: relative;
-  }
-} */
