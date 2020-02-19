@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 import { handleAddTweet } from "../actions/tweets";
 
 class NewTweet extends Component {
   state = {
-    text: ""
+    text: "",
+    toHome: false
   };
+
   handleChange = e => {
     const text = e.target.value;
 
@@ -13,6 +16,7 @@ class NewTweet extends Component {
       text
     }));
   };
+
   handleSubmit = e => {
     e.preventDefault();
 
@@ -22,13 +26,20 @@ class NewTweet extends Component {
     dispatch(handleAddTweet(text, id));
 
     this.setState(() => ({
-      text: ""
+      text: "",
+      toHome: id ? false : true
     }));
   };
-  render() {
-    const { text } = this.state;
 
-    const tweetLeft = 280 - text.length;
+  render() {
+    const { text, toHome } = this.state;
+
+    if (toHome === true) {
+      return <Redirect to="/" />;
+    }
+
+    const tweetMaxChar = 280;
+    const tweetLeft = tweetMaxChar - text.length;
 
     return (
       <div>
@@ -39,7 +50,7 @@ class NewTweet extends Component {
             value={text}
             onChange={this.handleChange}
             className="textarea"
-            maxLength={280}
+            maxLength={tweetMaxChar}
           />
           {tweetLeft <= 100 && <div className="tweet-length">{tweetLeft}</div>}
           <button className="btn" type="submit" disabled={text === ""}>
