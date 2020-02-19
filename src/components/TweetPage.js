@@ -7,11 +7,16 @@ class TweetPage extends Component {
   render() {
     const { id, replies } = this.props;
     return (
-      <div>
-        <Tweet id={id} />
+      <div className="section">
+        <div className="tweet-reply-to">
+          <Tweet id={id} />
+        </div>
+
         <NewTweet id={id} />
-        {replies.length !== 0 && <h3 className="center">Replies</h3>}
-        <ul>
+        {replies.length !== 0 && (
+          <h3 className="title is-4 has-text-centered">Replies</h3>
+        )}
+        <ul className="replies">
           {replies.map(replyId => (
             <li key={replyId}>
               <Tweet id={replyId} />

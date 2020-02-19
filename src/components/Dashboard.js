@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { FaTwitter } from "react-icons/fa";
 import Tweet from "./Tweet";
 
 class Dashboard extends Component {
   render() {
     return (
-      <div>
-        <h3 className="center">Your Timeline</h3>
-        <ul>
+      <div className="">
+        <div className="has-text-centered">
+          <FaTwitter size="32" color="rgb(29, 161, 242)" />
+        </div>
+
+        <ul className="tweets">
           {this.props.tweetIds.map(id => (
             <li key={id}>
               <Tweet id={id} />

@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { formatTweet, formatDate } from "../utils/helpers";
-import {
-  TiArrowBackOutline,
-  TiHeartOutline,
-  TiHeartFullOutline
-} from "react-icons/ti";
+import { FaRegComment, FaRegHeart, FaHeart } from "react-icons/fa";
 import { Link, withRouter } from "react-router-dom";
 import { handleToggleTweet } from "../actions/tweets";
 
@@ -31,7 +27,7 @@ class Tweet extends Component {
     const { tweet } = this.props;
 
     if (tweet === null) {
-      return <p>This Tweet doesn't existd</p>;
+      return <p>This Tweet doesn't exist.</p>;
     }
     const {
       name,
@@ -62,13 +58,13 @@ class Tweet extends Component {
             <p>{text}</p>
           </div>
           <div className="tweet-icons">
-            <TiArrowBackOutline className="tweet-icon" />
+            <FaRegComment size="18" className="tweet-icon" />
             <span>{replies !== 0 && replies}</span>
             <button className="heart-button" onClick={this.handleLike}>
               {hasLiked === true ? (
-                <TiHeartFullOutline color="#e0245e" className="tweet-icon" />
+                <FaHeart size="18" color="#e0245e" className="tweet-icon" />
               ) : (
-                <TiHeartOutline className="tweet-icon" />
+                <FaRegHeart size="18" className="tweet-icon" />
               )}
             </button>
             <span>{likes !== 0 && likes}</span>

@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FaFeatherAlt, FaHome } from "react-icons/fa";
 
 export default function Nav() {
   return (
@@ -7,12 +8,12 @@ export default function Nav() {
       <ul>
         <li>
           <NavLink to="/" exact activeClassName="active">
-            Home
+            Home <FaHome size="18" />
           </NavLink>
         </li>
         <li>
           <NavLink to="/new" activeClassName="active">
-            New Tweet
+            New Tweet <FaFeatherAlt size="18" />
           </NavLink>
         </li>
       </ul>

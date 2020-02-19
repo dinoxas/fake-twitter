@@ -42,8 +42,8 @@ class NewTweet extends Component {
     const tweetLeft = tweetMaxChar - text.length;
 
     return (
-      <div>
-        <h3 className="center">Compose new Tweet</h3>
+      <div className="section">
+        <h3 className="title is-4 has-text-centered">Compose new Tweet</h3>
         <form className="new-tweet" onSubmit={this.handleSubmit}>
           <textarea
             placeholder="What's happening?"
@@ -53,8 +53,12 @@ class NewTweet extends Component {
             maxLength={tweetMaxChar}
           />
           {tweetLeft <= 100 && <div className="tweet-length">{tweetLeft}</div>}
-          <button className="btn" type="submit" disabled={text === ""}>
-            Submit
+          <button
+            className="button is-info is-twitter"
+            type="submit"
+            disabled={text === ""}
+          >
+            Tweet
           </button>
         </form>
       </div>
