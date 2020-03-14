@@ -3,6 +3,17 @@
   border-radius: 50%;
   margin: 10px;
 }
+
+.navi {
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.navi li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
 .twitter-bg {
   background-color: rgb(29, 161, 242);
 }
@@ -16,7 +27,7 @@
 }
 
 .tweets > li:only-of-type a {
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #c3392a;
 }
 
 .tweet-reply-to .tweet:only-of-type,
@@ -32,7 +43,7 @@
 .tweet {
   color: #333;
   width: 100%;
-  max-width: 590px;
+
   padding: 10px;
   display: flex;
   margin: 0 auto;

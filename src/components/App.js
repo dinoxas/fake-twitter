@@ -7,6 +7,7 @@ import Dashboard from "./Dashboard";
 import NewTweet from "./NewTweet";
 import TweetPage from "./TweetPage";
 import Nav from "./Nav";
+import Header from "./Header";
 
 class App extends Component {
   componentDidMount() {
@@ -17,16 +18,7 @@ class App extends Component {
       <Router>
         <Fragment>
           <LoadingBar />
-          <section className="hero is-info">
-            <div className="hero-body">
-              <h1 className="title is-3 has-text-centered">
-                Fake Twitter app with React &amp; Redux
-              </h1>
-              <p className="has-text-centered">
-                Open the console to see the current action and state.
-              </p>
-            </div>
-          </section>
+          <Header />
           <div className="container">
             <Nav />
             {this.props.loading === true ? null : (

@@ -6,19 +6,13 @@ import Tweet from "./Tweet";
 class Dashboard extends Component {
   render() {
     return (
-      <div>
-        <div className="has-text-centered">
-          <FaTwitter size="32" color="rgb(29, 161, 242)" />
-        </div>
-
-        <ul className="tweets">
-          {this.props.tweetIds.map(id => (
-            <li key={id}>
-              <Tweet id={id} />
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul className="tweets">
+        {this.props.tweetIds.map(id => (
+          <li key={id}>
+            <Tweet id={id} />
+          </li>
+        ))}
+      </ul>
     );
   }
 }

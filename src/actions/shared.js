@@ -4,7 +4,7 @@ import { receiveTweets } from "../actions/tweets";
 import { setAuthedUser } from "../actions/authedUser";
 import { showLoading, hideLoading } from "react-redux-loading";
 
-const AUTHED_ID = "tylermcginnis";
+const AUTHED_ID = "dinoxas29";
 
 export function handleInitialData() {
   return dispatch => {
