@@ -5,7 +5,7 @@ Twitter clone with the following basic functionalities:
 - Like a tweet
 - Comment on a tweet
 
-Note: Open the console or use the Redux chrome Add-on to see the current action and state of the app.
+Note: Open the console or use the Redux DevTools to see the current action and state of the app.
 
 [Demo](https://dinoxas-fake-twitter.netlify.com)
 
